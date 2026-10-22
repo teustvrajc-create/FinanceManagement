@@ -1,20 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View } from 'react-native';
+import { useFonts } from 'expo-font';
+import {
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+  Poppins_700Bold,
+} from '@expo-google-fonts/poppins';
+
+import Splash from './src/components/Splash';
+import Welcome from './src/components/Welcome';
+import { colors } from './src/ui';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  const [fontsLoaded] = useFonts({
+    Poppins_500Medium,
+    Poppins_600SemiBold,
+    Poppins_700Bold,
+  });
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  // заставка 2 секунды, затем приветственный экран
+  useEffect(() => {
+    if (!fontsLoaded) return;
+    const timer = setTimeout(() => setShowWelcome(true), 2000);
+    return () => clearTimeout(timer);
+  }, [fontsLoaded]);
+
+  // пока грузятся шрифты — зелёный фон, без белой вспышки
+  if (!fontsLoaded) {
+    return <View style={{ flex: 1, backgroundColor: colors.primary }} />;
+  }
+
+  return showWelcome ? (
+    <Welcome
+      onLogin={() => console.log('Log In')}
+      onSignUp={() => console.log('Sign Up')}
+      onForgot={() => console.log('Forgot Password?')}
+    />
+  ) : (
+    <Splash />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
