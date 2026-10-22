@@ -9,9 +9,9 @@ type Props = {
   onForgot?: () => void;
 };
 
-/** 1-B · Launch — приветственный экран: Log In / Sign Up / Forgot Password */
+
 export default function Welcome({ onLogin, onSignUp, onForgot }: Props) {
-  // плавное появление после заставки
+
   const opacity = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     Animated.timing(opacity, { toValue: 1, duration: 500, useNativeDriver: true }).start();
