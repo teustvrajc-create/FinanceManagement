@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Animated, Pressable, StyleSheet, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { colors, fonts, Logo, PillButton } from '../ui';
@@ -12,7 +12,7 @@ type Props = {
 /** 1-B · Launch — приветственный экран: Log In / Sign Up / Forgot Password */
 export default function Welcome({ onLogin, onSignUp, onForgot }: Props) {
   // плавное появление после заставки
-  const opacity = useRef(new Animated.Value(0)).current;
+  const [opacity] = useState(() => new Animated.Value(0));
   useEffect(() => {
     Animated.timing(opacity, { toValue: 1, duration: 500, useNativeDriver: true }).start();
   }, [opacity]);

@@ -96,7 +96,6 @@ export default function Icon({ name, size = 22, color = colors.text }: Props) {
     case 'search':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Circle {...stroke} cx="10.8" cy="10.8" r="6.8" /><Path {...stroke} d="m16 16 5 5" /></Svg>;
     case 'plus':
-    case 'more':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="M12 5v14M5 12h14" /></Svg>;
     case 'check':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="m5 12 4 4L19 6" /></Svg>;

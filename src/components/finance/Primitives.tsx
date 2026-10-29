@@ -272,6 +272,7 @@ export const sampleTransactions: Transaction[] = [
   { title: 'Transport', detail: 'Fuel', date: '9:30 · Apr 15', amount: '-$4.13', icon: 'car', color: '#218CF0', category: 'Transport' },
   { title: 'Food', detail: 'Dinner', date: '19:30 · March 30', amount: '-$70.40', icon: 'food', color: '#3C9CF4', category: 'Food' },
   { title: 'Medicine', detail: 'Pharmacy', date: '11:15 · March 27', amount: '-$25.90', icon: 'medicine', color: '#4F98E4', category: 'Health' },
+  { title: 'Entertainment', detail: 'Cinema', date: '20:00 · March 22', amount: '-$32.00', icon: 'entertainment', color: '#8B86E8', category: 'Entertainment' },
 ];
 
 export function TransactionRow({ item }: { item: Transaction }) {
