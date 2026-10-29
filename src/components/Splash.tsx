@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { colors, Logo } from '../ui';
 
-/** 1-A · Launch — зелёная заставка с логотипом */
+
 export default function Splash() {
   return (
     <View style={styles.container}>
