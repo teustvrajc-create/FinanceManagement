@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import Icon from '../components/finance/Icon';
+import Icon from '../../components/finance/Icon';
 import {
   BalanceOverview,
   FinanceLayout,
   PrimaryButton,
   SectionHeading,
   TransactionList,
-} from '../components/finance/Primitives';
-import { colors, fonts } from '../ui';
+} from '../../components/finance/Primitives';
+import { colors, fonts } from '../../ui';
 
 const periods = ['Daily', 'Weekly', 'Monthly'] as const;
 

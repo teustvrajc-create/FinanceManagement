@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Link, router, useLocalSearchParams } from 'expo-router';
-import { AuthFrame, PrimaryButton, TextLink } from '../components/finance/Primitives';
-import { colors, fonts } from '../ui';
+import { AuthFrame, PrimaryButton, TextLink } from '../../components/finance/Primitives';
+import { colors, fonts } from '../../ui';
 
 export default function SecurityPinScreen() {
   const { email } = useLocalSearchParams<{ email?: string }>();
