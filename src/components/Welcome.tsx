@@ -11,13 +11,8 @@ type Props = {
 
 
 export default function Welcome({ onLogin, onSignUp, onForgot }: Props) {
-<<<<<<< HEAD
   // плавное появление после заставки
   const [opacity] = useState(() => new Animated.Value(0));
-=======
-
-  const opacity = useRef(new Animated.Value(0)).current;
->>>>>>> 090378488e8664c22c8f5f16911da0f4a907b333
   useEffect(() => {
     Animated.timing(opacity, { toValue: 1, duration: 500, useNativeDriver: true }).start();
   }, [opacity]);
