@@ -5,12 +5,18 @@ import Svg, { Path, Rect } from 'react-native-svg';
 /* ---------- Цвета и шрифты FinWise ---------- */
 
 export const colors = {
-  primary: '#00D09E', // основной зелёный
-  dark: '#0E3E3E', // тёмно-зелёный (логотип на заставке)
-  text: '#052224', // почти чёрный
-  background: '#F1FFF3', // светлый фон
-  soft: '#DFF7E2', // фон второй кнопки
+  primary: '#00D09E',
+  dark: '#0E3E3E',
+  text: '#052224',
+  background: '#F1FFF3',
+  soft: '#DFF7E2',
   white: '#FFFFFF',
+  muted: '#73908F',
+  line: '#DCEFE0',
+  blue: '#4B95EC',
+  blueSoft: '#EAF4FF',
+  orange: '#F4A15D',
+  red: '#EB7E77',
 };
 
 export const fonts = {
