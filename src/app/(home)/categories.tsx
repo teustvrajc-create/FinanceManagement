@@ -1,9 +1,9 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import Icon, { IconName } from '../components/finance/Icon';
-import { FinanceLayout, PageHeader, PrimaryButton } from '../components/finance/Primitives';
-import { colors, fonts } from '../ui';
+import Icon, { IconName } from '../../components/finance/Icon';
+import { FinanceLayout, PageHeader, PrimaryButton } from '../../components/finance/Primitives';
+import { colors, fonts } from '../../ui';
 
 const categories: { label: string; icon: IconName; amount: string }[] = [
   { label: 'Food', icon: 'food', amount: '$320' },

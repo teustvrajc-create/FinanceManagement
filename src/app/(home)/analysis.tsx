@@ -1,9 +1,9 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import Icon from '../components/finance/Icon';
-import { FinanceLayout, PageHeader, SectionHeading, TransactionList } from '../components/finance/Primitives';
-import { colors, fonts } from '../ui';
+import Icon from '../../components/finance/Icon';
+import { FinanceLayout, PageHeader, SectionHeading, TransactionList } from '../../components/finance/Primitives';
+import { colors, fonts } from '../../ui';
 
 const bars = [32, 52, 38, 78, 55, 95, 69, 84];
 const weeks = ['1st', '2nd', '3rd', '4th'];

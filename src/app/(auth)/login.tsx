@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Link, router } from 'expo-router';
-import { AuthFrame, PrimaryButton, TextField, TextLink } from '../components/finance/Primitives';
-import Icon from '../components/finance/Icon';
-import { colors, fonts } from '../ui';
+import { AuthFrame, PrimaryButton, TextField, TextLink } from '../../components/finance/Primitives';
+import Icon from '../../components/finance/Icon';
+import { colors, fonts } from '../../ui';
 
 export default function LoginScreen() {
   const [showPassword, setShowPassword] = useState(false);

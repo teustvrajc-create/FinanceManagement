@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import { colors, fonts } from '../ui';
+import { colors, fonts } from '../../ui';
 import {
   BalanceOverview,
   FinanceLayout,
   PageHeader,
   SectionHeading,
   TransactionList,
-} from '../components/finance/Primitives';
+} from '../../components/finance/Primitives';
 
 export default function BalanceScreen() {
   return (

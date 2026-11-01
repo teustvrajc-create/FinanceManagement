@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Link, router } from 'expo-router';
-import { AuthFrame, PrimaryButton, TextField } from '../components/finance/Primitives';
-import { colors, fonts } from '../ui';
+import { AuthFrame, PrimaryButton, TextField } from '../../components/finance/Primitives';
+import { colors, fonts } from '../../ui';
 
 export default function ForgotPasswordScreen() {
   const [email, setEmail] = useState('');

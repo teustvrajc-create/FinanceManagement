@@ -1,15 +1,15 @@
 import React, { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
-import Icon from '../components/finance/Icon';
+import Icon from '../../components/finance/Icon';
 import {
   FinanceLayout,
   PageHeader,
   sampleTransactions,
   SectionHeading,
   TransactionList,
-} from '../components/finance/Primitives';
-import { colors, fonts } from '../ui';
+} from '../../components/finance/Primitives';
+import { colors, fonts } from '../../ui';
 
 export default function TransactionsScreen() {
   const { category } = useLocalSearchParams<{ category?: string }>();
