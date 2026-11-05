@@ -1,5 +1,5 @@
-import TransactionsDashboard from '../../../components/finance/TransactionsDashboard';
+import TransactionsScreen from '../../../features/transactions/TransactionsScreen';
 
 export default function ExpenseTransactionsScreen() {
-  return <TransactionsDashboard mode="expense" />;
+  return <TransactionsScreen mode="expense" />;
 }

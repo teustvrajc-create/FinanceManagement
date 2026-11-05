@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { colors, Logo } from '../ui';
+import { colors } from '../theme';
+import Logo from './brand/Logo';
 
 
 export default function Splash() {

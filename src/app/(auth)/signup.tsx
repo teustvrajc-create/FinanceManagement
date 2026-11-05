@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Link, router } from 'expo-router';
-import { AuthFrame, PrimaryButton, TextField } from '../../components/finance/Primitives';
+import { AuthFrame, PrimaryButton, TextField } from '../../components/finance/primitives';
 import Icon from '../../components/finance/Icon';
-import { colors, fonts } from '../../ui';
+import { colors, fonts } from '../../theme';
 
 export default function SignUpScreen() {
   const [visible, setVisible] = useState(false);

@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
 import Icon from '../../components/finance/Icon';
-import { AuthFrame, PrimaryButton } from '../../components/finance/Primitives';
-import { colors, fonts } from '../../ui';
+import { AuthFrame, PrimaryButton } from '../../components/finance/primitives';
+import { colors, fonts } from '../../theme';
 
 export default function FingerprintScreen() {
   return (

@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
 import Icon from '../../components/finance/Icon';
+import { homeTransactions } from '../../features/transactions/data/transactions';
 import {
   BalanceOverview,
   FinanceLayout,
   PrimaryButton,
   SectionHeading,
   TransactionList,
-} from '../../components/finance/Primitives';
-import { colors, fonts } from '../../ui';
+} from '../../components/finance/primitives';
+import { colors, fonts } from '../../theme';
 
 const periods = ['Daily', 'Weekly', 'Monthly'] as const;
 
@@ -62,11 +63,7 @@ export default function HomeScreen() {
       </View>
 
       <SectionHeading title="Recent Transactions" action="See all" />
-      <TransactionList items={[
-        { title: 'Salary', detail: 'Monthly', date: '12:27 · Apr 30', amount: '+$4,000.00', icon: 'wallet', color: '#67B9F4', category: 'Income' },
-        { title: 'Groceries', detail: 'Pantry', date: '17:00 · Apr 24', amount: '-$100.00', icon: 'groceries', color: '#59A5EC', category: 'Food' },
-        { title: 'Rent', detail: 'Monthly', date: '8:30 · Apr 15', amount: '-$674.40', icon: 'rent', color: '#2E91F4', category: 'Home' },
-      ]} />
+      <TransactionList items={homeTransactions} />
       <PrimaryButton title="View all transactions" onPress={() => router.push('/transactions' as never)} backgroundColor={colors.soft} style={styles.viewAll} />
     </FinanceLayout>
   );

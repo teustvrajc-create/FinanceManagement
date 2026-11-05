@@ -1,0 +1,5 @@
+export const fonts = {
+  medium: 'Poppins_500Medium',
+  semiBold: 'Poppins_600SemiBold',
+  bold: 'Poppins_700Bold',
+} as const;

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Animated, Pressable, StyleSheet, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { colors, fonts, Logo, PillButton } from '../ui';
+import { colors, fonts } from '../theme';
+import Logo from './brand/Logo';
+import PillButton from './ui/PillButton';
 
 type Props = {
   onLogin?: () => void;

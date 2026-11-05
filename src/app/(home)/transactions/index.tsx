@@ -1,5 +1,5 @@
-import TransactionsDashboard from '../../../components/finance/TransactionsDashboard';
+import TransactionsPage from '../../../features/transactions/TransactionsScreen';
 
-export default function TransactionsScreen() {
-  return <TransactionsDashboard mode="all" />;
+export default function AllTransactionsRoute() {
+  return <TransactionsPage mode="all" />;
 }

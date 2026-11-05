@@ -1,3 +1,3 @@
-import AnalysisDashboard from '../../components/finance/AnalysisDashboard';
+import AnalysisScreen from '../../features/analysis/AnalysisScreen';
 
-export default AnalysisDashboard;
+export default AnalysisScreen;

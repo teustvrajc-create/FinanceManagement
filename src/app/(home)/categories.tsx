@@ -1,21 +1,10 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import Icon, { IconName } from '../../components/finance/Icon';
-import { FinanceLayout, PageHeader, PrimaryButton } from '../../components/finance/Primitives';
-import { colors, fonts } from '../../ui';
-
-const categories: { label: string; icon: IconName; amount: string }[] = [
-  { label: 'Food', icon: 'food', amount: '$320' },
-  { label: 'Transport', icon: 'car', amount: '$186' },
-  { label: 'Medicine', icon: 'medicine', amount: '$74' },
-  { label: 'Groceries', icon: 'groceries', amount: '$210' },
-  { label: 'Rent', icon: 'rent', amount: '$674' },
-  { label: 'Gifts', icon: 'gift', amount: '$45' },
-  { label: 'Savings', icon: 'savings', amount: '$900' },
-  { label: 'Entertainment', icon: 'entertainment', amount: '$120' },
-  { label: 'More', icon: 'more', amount: '' },
-];
+import Icon from '../../components/finance/Icon';
+import { FinanceLayout, PageHeader, PrimaryButton } from '../../components/finance/primitives';
+import { colors, fonts } from '../../theme';
+import { categories } from '../../features/categories/data/categories';
 
 export default function CategoriesScreen() {
   return (

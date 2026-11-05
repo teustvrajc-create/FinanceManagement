@@ -5,7 +5,7 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
-import { colors } from '../ui';
+import { colors } from '../theme';
 
 export default function RootLayout() {
   useFonts({

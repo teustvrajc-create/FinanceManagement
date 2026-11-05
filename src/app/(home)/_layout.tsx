@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router';
-import { colors } from '../../ui';
+import { colors } from '../../theme';
 
 export default function HomeLayout() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Link, router } from 'expo-router';
-import { colors, fonts } from '../../ui';
+import { colors, fonts } from '../../theme';
 import OnboardingIllustration from '../../components/finance/OnboardingIllustration';
-import { ScreenFrame } from '../../components/finance/Primitives';
+import { ScreenFrame } from '../../components/finance/primitives';
 
 export default function OnboardingOneScreen() {
   return (
