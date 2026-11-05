@@ -7,6 +7,7 @@ export type IconName =
   | 'analysis'
   | 'transactions'
   | 'categories'
+  | 'layers'
   | 'profile'
   | 'bell'
   | 'back'
@@ -17,6 +18,7 @@ export type IconName =
   | 'fingerprint'
   | 'food'
   | 'car'
+  | 'bus'
   | 'medicine'
   | 'groceries'
   | 'rent'
@@ -55,6 +57,8 @@ export default function Icon({ name, size = 22, color = colors.text }: Props) {
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="M4 7h15l-3-3m4 13H5l3 3" /><Path {...stroke} d="M19 7v5M5 17v-5" /></Svg>;
     case 'categories':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" /></Svg>;
+    case 'layers':
+      return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" /></Svg>;
     case 'profile':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Circle {...stroke} cx="12" cy="8" r="3.5" /><Path {...stroke} d="M4.5 21c.5-4.1 3.1-6.2 7.5-6.2s7 2.1 7.5 6.2" /></Svg>;
     case 'bell':
@@ -75,6 +79,8 @@ export default function Icon({ name, size = 22, color = colors.text }: Props) {
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="M6 3v7m-3-7v4a3 3 0 0 0 6 0V3m-3 7v11m9-18v18m0-18c3 2 4 5 4 9h-4" /></Svg>;
     case 'car':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="m4 11 2-5h12l2 5 1 2v6h-3v-2H6v2H3v-6zM4 11h16M7 15h.1M17 15h.1" /></Svg>;
+    case 'bus':
+      return <Svg width={size} height={size} viewBox="0 0 24 24"><Rect {...stroke} x="4" y="3" width="16" height="16" rx="3" /><Path {...stroke} d="M4 13h16M7 7h3m4 0h3M7 19v2m10-2v2M7 16h.1M17 16h.1" /></Svg>;
     case 'medicine':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="M9 4a5 5 0 0 1 7.1 0l3.9 3.9a5 5 0 0 1-7.1 7.1L9 11.1A5 5 0 0 1 9 4Z" /><Path {...stroke} d="m9 11 7-7" /></Svg>;
     case 'groceries':
