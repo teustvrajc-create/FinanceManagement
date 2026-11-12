@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../../theme/colors';
 import { fonts } from '../../../theme/fonts';
 
-export default function SectionHeading({ title, action }: { title: string; action?: string }) {
+export default function SectionHeading({ title, action, onPress }: { title: string; action?: string; onPress?: () => void }) {
   return (
     <View style={styles.row}>
       <Text style={styles.title}>{title}</Text>
-      {action ? <Text style={styles.action}>{action}</Text> : null}
+      {action ? <Pressable accessibilityRole="button" onPress={onPress} disabled={!onPress} hitSlop={8}><Text style={styles.action}>{action}</Text></Pressable> : null}
     </View>
   );
 }

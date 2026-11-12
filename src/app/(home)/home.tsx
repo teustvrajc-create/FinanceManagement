@@ -23,13 +23,18 @@ export default function HomeScreen() {
           <Text style={styles.welcomeText}>Hi, Welcome Back</Text>
           <Text style={styles.greeting}>Good morning</Text>
         </View>
-        <Pressable accessibilityLabel="Notifications" onPress={() => router.push('/transactions' as never)} style={styles.notification}>
+        <Pressable accessibilityLabel="Notifications" onPress={() => router.push('/notifications' as never)} style={styles.notification}>
           <Icon name="bell" size={19} color={colors.dark} />
           <View style={styles.dot} />
         </Pressable>
       </View>
 
       <BalanceOverview onPress={() => router.push('/balance' as never)} />
+
+      <Pressable onPress={() => router.push('/quick-analysis' as never)} style={styles.quickLink}>
+        <Text style={styles.quickLinkText}>Quickly Analysis</Text>
+        <Text style={styles.quickArrow}>›</Text>
+      </Pressable>
 
       <Pressable onPress={() => router.push('/analysis' as never)} style={styles.insightsCard}>
         <View style={styles.insight}>
@@ -89,4 +94,7 @@ const styles = StyleSheet.create({
   periodText: { color: colors.muted, fontFamily: fonts.medium, fontSize: 9 },
   periodTextActive: { color: colors.dark, fontFamily: fonts.semiBold },
   viewAll: { marginTop: 11 },
+  quickLink: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#DDF8E2', borderRadius: 13, paddingHorizontal: 13, paddingVertical: 9, marginBottom: 11 },
+  quickLinkText: { color: colors.dark, fontFamily: fonts.semiBold, fontSize: 10 },
+  quickArrow: { color: colors.dark, fontSize: 20, lineHeight: 22 },
 });

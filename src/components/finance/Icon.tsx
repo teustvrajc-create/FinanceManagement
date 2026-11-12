@@ -31,7 +31,8 @@ export type IconName =
   | 'search'
   | 'plus'
   | 'check'
-  | 'chevron';
+  | 'chevron'
+  | 'arrow';
 
 type Props = {
   name: IconName;
@@ -107,6 +108,8 @@ export default function Icon({ name, size = 22, color = colors.text }: Props) {
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="m5 12 4 4L19 6" /></Svg>;
     case 'chevron':
       return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="m9 18 6-6-6-6" /></Svg>;
+    case 'arrow':
+      return <Svg width={size} height={size} viewBox="0 0 24 24"><Path {...stroke} d="M5 12h14m-6-6 6 6-6 6" /></Svg>;
     default:
       return null;
   }

@@ -12,7 +12,7 @@ import SummaryMetrics from './components/SummaryMetrics';
 import TargetCard from './components/TargetCard';
 import { chartData } from './data/chartData';
 import { analysisPalette as palette } from './palette';
-import { periods, Period } from './types';
+import { Period } from './types';
 
 export default function AnalysisScreen() {
   const router = useRouter();
@@ -23,22 +23,18 @@ export default function AnalysisScreen() {
     else router.replace('/home' as never);
   };
 
-  const cyclePeriod = () => {
-    setPeriod((current) => periods[(periods.indexOf(current) + 1) % periods.length]);
-  };
-
   return (
     <SafeAreaView edges={['top']} style={styles.screen}>
       <StatusBar style="light" />
-      <AnalysisHeader onBack={goBack} onNotifications={() => router.push('/transactions' as never)} />
+      <AnalysisHeader onBack={goBack} onNotifications={() => router.push('/notifications' as never)} />
       <View style={styles.panel}>
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
           <PeriodSelector value={period} onChange={setPeriod} />
           <IncomeExpenseChart
             period={period}
             data={chartData[period]}
-            onSearch={() => router.push('/transactions' as never)}
-            onCyclePeriod={cyclePeriod}
+            onSearch={() => router.push('/analysis/search' as never)}
+            onCyclePeriod={() => router.push('/analysis/calendar' as never)}
           />
           <SummaryMetrics />
           <Text style={styles.targetsHeading}>My Targets</Text>

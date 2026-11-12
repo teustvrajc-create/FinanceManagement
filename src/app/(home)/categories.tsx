@@ -18,7 +18,11 @@ export default function CategoriesScreen() {
           <Pressable
             accessibilityRole="button"
             key={item.label}
-            onPress={() => router.push({ pathname: '/transactions', params: { category: item.label } } as never)}
+            onPress={() => {
+              if (item.label === 'Savings') router.push('/saving-goals' as never);
+              else if (item.label === 'More') router.push('/categories/new' as never);
+              else router.push(('/categories/' + item.label.toLowerCase()) as never);
+            }}
             style={styles.category}
           >
             <View style={[styles.categoryIcon, index === 8 && styles.addIcon]}>
@@ -29,7 +33,7 @@ export default function CategoriesScreen() {
           </Pressable>
         ))}
       </View>
-      <PrimaryButton title="Add expense" icon="plus" onPress={() => router.push('/transactions' as never)} style={styles.addExpense} />
+      <PrimaryButton title="Add expense" icon="plus" onPress={() => router.push('/categories/food/add-expense' as never)} style={styles.addExpense} />
     </FinanceLayout>
   );
 }

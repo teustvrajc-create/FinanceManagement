@@ -5,13 +5,14 @@ import Icon, { IconName } from '../Icon';
 import { colors } from '../../../theme/colors';
 import { fonts } from '../../../theme/fonts';
 
-export type TabKey = 'home' | 'analysis' | 'transactions' | 'categories';
+export type TabKey = 'home' | 'analysis' | 'transactions' | 'categories' | 'profile';
 
 const tabs: { key: TabKey; label: string; icon: IconName; route: string }[] = [
   { key: 'home', label: 'Home', icon: 'home', route: '/home' },
   { key: 'analysis', label: 'Analysis', icon: 'analysis', route: '/analysis' },
   { key: 'transactions', label: 'Activity', icon: 'transactions', route: '/transactions' },
   { key: 'categories', label: 'Categories', icon: 'categories', route: '/categories' },
+  { key: 'profile', label: 'Profile', icon: 'profile', route: '/profile' },
 ];
 
 export default function BottomNavigation({ active }: { active: TabKey }) {
@@ -24,6 +25,7 @@ export default function BottomNavigation({ active }: { active: TabKey }) {
             key={tab.key}
             accessibilityRole="button"
             accessibilityLabel={tab.label}
+            accessibilityState={{ selected }}
             onPress={() => router.replace(tab.route as never)}
             style={styles.tab}
           >

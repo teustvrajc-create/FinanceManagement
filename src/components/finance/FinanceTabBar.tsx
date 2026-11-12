@@ -11,7 +11,7 @@ const tabs: { key: FinanceTab; label: string; icon: IconName; route: string }[] 
   { key: 'analysis', label: 'Analysis', icon: 'analysis', route: '/analysis' },
   { key: 'transactions', label: 'Transactions', icon: 'transactions', route: '/transactions' },
   { key: 'categories', label: 'Categories', icon: 'layers', route: '/categories' },
-  { key: 'profile', label: 'Profile', icon: 'profile', route: '/balance' },
+  { key: 'profile', label: 'Profile', icon: 'profile', route: '/profile' },
 ];
 
 export default function FinanceTabBar({ active }: { active: FinanceTab }) {

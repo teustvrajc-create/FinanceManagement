@@ -17,7 +17,7 @@ export default function PageHeader({ title, onBack, notification = false }: Page
       ) : <View style={styles.side} />}
       <Text numberOfLines={1} style={styles.title}>{title}</Text>
       {notification ? (
-        <Pressable accessibilityRole="button" accessibilityLabel="Notifications" onPress={() => router.push('/transactions')} style={styles.action}>
+        <Pressable accessibilityRole="button" accessibilityLabel="Notifications" onPress={() => router.push('/notifications' as never)} style={styles.action}>
           <Icon name="bell" size={20} color={colors.dark} />
           <View style={styles.dot} />
         </Pressable>
