@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { router } from 'expo-router';
 import Icon from '../../components/finance/Icon';
 import { homeTransactions } from '../../features/transactions/data/transactions';
+import CurrencySummaryCard from '../../features/exchange/components/CurrencySummaryCard';
 import {
   BalanceOverview,
   FinanceLayout,
@@ -30,6 +31,7 @@ export default function HomeScreen() {
       </View>
 
       <BalanceOverview onPress={() => router.push('/balance' as never)} />
+      <CurrencySummaryCard />
 
       <Pressable onPress={() => router.push('/quick-analysis' as never)} style={styles.quickLink}>
         <Text style={styles.quickLinkText}>Quickly Analysis</Text>
